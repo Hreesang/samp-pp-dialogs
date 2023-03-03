@@ -30,7 +30,7 @@ While you're on it and if you don't use PawnPlus yet,
 
 This include provides one single function
 ```pawn
-Task:ShowPlayerAsyncDialog(playerid, DIALOG_STYLE:style, const caption[], const info[], const button1[], const button2[] = "")
+Task:ShowPlayerAsyncDialog(playerid, DIALOG_STYLE:style, const caption[], const info[], const button1[], const button2[] = "");
 ```
 
 This will show the dialog and await for the response, which will pause the
@@ -42,8 +42,8 @@ code that was to be resumed.
 
 For comfortability, it also provides support for PawnPlus strings:
 ```pawn
-ShowPlayerDialogStr(playerid, dialogid, DIALOG_STYLE:style, ConstString:caption, ConstString:info, ConstString:button1, ConstString:button2 = ConstString:STRING_NULL)
-Task:ShowPlayerAsyncDialogStr(playerid, DIALOG_STYLE:style, ConstString:caption, ConstString:info, ConstString:button1, ConstString:button2 = ConstString:STRING_NULL)
+ShowPlayerDialogStr(playerid, dialogid, DIALOG_STYLE:style, ConstString:caption, ConstString:info, ConstString:button1, ConstString:button2 = ConstString:STRING_NULL);
+Task:ShowPlayerAsyncDialogStr(playerid, DIALOG_STYLE:style, ConstString:caption, ConstString:info, ConstString:button1, ConstString:button2 = ConstString:STRING_NULL);
 ```
 
 ### Example
