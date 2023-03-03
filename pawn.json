@@ -1,0 +1,21 @@
+{
+  "user": "Hreesang",
+  "repo": "samp-pp-dialogs",
+  "tag": "1.0.0",
+  "entry": "test.pwn",
+  "output": "gamemodes/test.amx",
+  "local": true,
+  "dev_dependencies": [
+    "pawn-lang/samp-stdlib#0008120a926f5b017b5c43b2e18e9d680f7e3366",
+    "pawn-lang/pawn-stdlib#e96507d9a6ddaae5bb0f3ec31479ba805aeff964",
+    "Y-Less/samp-plugin-crashdetect:v4.22",
+    "IS4Code/PawnPlus:v1.4.2"
+  ],
+  "runtime": {
+    "version": "0.3.DL",
+    "port": 7777,
+    "extra": {
+      "useartwork": "0"
+    }
+  }
+}
