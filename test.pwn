@@ -31,6 +31,7 @@ static GetRandomSkin()
 
 static TestAsyncDialog(playerid)
 {
+	yield 1;
 	new Task:t = ShowPlayerAsyncDialog(
 		playerid,
 		DIALOG_STYLE_MSGBOX,
@@ -54,6 +55,7 @@ static TestAsyncDialog(playerid)
 
 static TestAsyncDialogStr(playerid)
 {
+	yield 1;
 	new Task:t = ShowPlayerAsyncDialogStr(
 		playerid,
 		DIALOG_STYLE_MSGBOX,

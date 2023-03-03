@@ -48,10 +48,9 @@ Task:ShowPlayerAsyncDialogStr(playerid, DIALOG_STYLE:style, ConstString:caption,
 
 ### Example
 ```pawn
-TestAsyncDialog(playerid)
+static TestAsyncDialog(playerid)
 {
-    task_yield(1);
-
+	yield 1;
 	new Task:t = ShowPlayerAsyncDialog(
 		playerid,
 		DIALOG_STYLE_MSGBOX,
@@ -73,8 +72,9 @@ TestAsyncDialog(playerid)
 	SendClientMessage(playerid, -1, string);
 }
 
-TestAsyncDialogStr(playerid)
+static TestAsyncDialogStr(playerid)
 {
+	yield 1;
 	new Task:t = ShowPlayerAsyncDialogStr(
 		playerid,
 		DIALOG_STYLE_MSGBOX,
