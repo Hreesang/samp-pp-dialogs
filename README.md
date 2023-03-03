@@ -104,3 +104,4 @@ You might be wondering that because this library is quite similar with [async-di
 ## Thanks
 * [IS4Code](https://github.com/IS4Code) for PawnPlus, which allows this and even more awesome stuff
 * [AGraber](https://github.com/AGraber) for `async-dialogs`, most of the concept is from there, even the `README.md` is from there
+* [Y-Less](https://github.com/Y-Less) for Pre-Hooks snippets

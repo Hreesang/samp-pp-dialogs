@@ -20,8 +20,9 @@
 // -
 // Pre-Hooks
 // -
-// This method was taken from https://github.com/oscar-broman/samp-weapon-config/issues/61#issuecomment-268567805
-// Thanks, Y_Less. I only added a little parentheses on CHAIN_NEXT define '()'.
+// This method was taken from
+// https://github.com/oscar-broman/samp-weapon-config/issues/61#issuecomment-268567805
+// Thanks to Y_Less.
 // -
 
 #if !defined CHAIN_ORDER
@@ -29,8 +30,7 @@
 #endif
 
 #define CHAIN_HOOK(%0) forward @CO_%0();public @CO_%0(){return CHAIN_ORDER()+1;}
-
-#define CHAIN_NEXT(%0) @CO_%0()
+#define CHAIN_NEXT(%0) @CO_%0
 
 #define CHAIN_FORWARD:%0_%2(%1)=%3; \
 	forward %0_%2(%1); \
@@ -39,11 +39,12 @@
 
 #define CHAIN_PUBLIC:%0(%1) %0(%1) <_ALS : _ALS_go>
 
-static stock _PPD_IncludeStates() <_ALS : _ALS_x0, _ALS : _ALS_x1, _ALS : _ALS_x2, _ALS : _ALS_x3> {}
-static stock _PPD_IncludeStates() <_ALS : _ALS_go> {}
 CHAIN_HOOK(PPD)
 #undef CHAIN_ORDER
-#define CHAIN_ORDER() CHAIN_NEXT(PPD)
+#define CHAIN_ORDER CHAIN_NEXT(PPD)
+
+static stock _PPD_IncludeStates() <_ALS : _ALS_x0, _ALS : _ALS_x1, _ALS : _ALS_x2, _ALS : _ALS_x3> {}
+static stock _PPD_IncludeStates() <_ALS : _ALS_go> {}
 
 
 // -
@@ -208,5 +209,3 @@ CHAIN_FORWARD:PPD_OnPlayerDiconnect(playerid, reason) = 1;
 #endif
 #define OnDialogResponse(%0) CHAIN_PUBLIC:PPD_OnDialogResponse(%0)
 CHAIN_FORWARD:PPD_OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]) = 0;
-
-
